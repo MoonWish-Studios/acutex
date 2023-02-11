@@ -12,6 +12,7 @@ module.exports = {
         white1: "#FAFAFA",
         gray1: "#737373",
         gray2: "#404040",
+        grayInput: "#F2F2F2",
         gray3: "#A3A3A3",
         white2: "#E9E9E9",
       },
