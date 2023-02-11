@@ -227,7 +227,7 @@ function Bullet({
   )
 }
 
-function BigBullet({ children }: { children: React.ReactNode }) {
+export function BigBullet({ children }: { children: React.ReactNode }) {
   return (
     <li className="bg-grayInput px-6 py-2 w-fit rounded-lg flex items-center text-xl font-normal text-neutral-900 ">
       <svg

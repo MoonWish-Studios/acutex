@@ -347,7 +347,7 @@ export function Landing({
   children,
 }: LandingParameters) {
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center gap-10 ">
+    <div className="relative h-[70vh] flex flex-col items-center justify-center gap-10 ">
       <Image
         src={background}
         className="-z-50"
@@ -355,7 +355,7 @@ export function Landing({
         alt="Background Of Landing Page"
       />
       <h1
-        className="md:text-[4rem] text-[2.35rem] text-center md:w-8/12 w-10/12 font-bold text-neutral-900
+        className="md:text-[4rem] text-[2.35rem] text-center md:w-8/12 w-10/12 font-semibold text-neutral-900
        md:tracking-wider tracking-wide md:leading-[4.5rem] leading-[3.25rem]"
       >
         {title}
