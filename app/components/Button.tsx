@@ -17,7 +17,7 @@ export default function Button({
       href={`${href}`}
       className={`inline-block text-center max-w-fit ${
         reverse
-          ? "text-black1 bg-white1 border-[1.5px] font-normal"
+          ? "text-black1 bg-white1 outline outline-[3px] hover:outline-black1 hover:outline-[2px] outline-white2/75 font-normal"
           : "bg-black1 text-white1 font-normal"
       }
 

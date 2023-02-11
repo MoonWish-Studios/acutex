@@ -12,7 +12,10 @@ export default function HomeLanding() {
       </h1>
       <div className="buttonSection flex flex-row gap-5">
         <Button>Get In Touch </Button>
-        <Button reverse={true} className="border-black1  text-black1 px-[50px]">
+        <Button
+          reverse={true}
+          className="outline-white2  text-black1 px-[50px]"
+        >
           Products
         </Button>
       </div>

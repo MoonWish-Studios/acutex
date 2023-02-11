@@ -13,16 +13,19 @@ export default function Advantage() {
   return (
     <div className="flex flex-col w-full justify-center items-center md:px-20 px-5 mb-20">
       <div
-        className="flex flex-col justify-center items-center content bg-amber-200 w-full
-      text-center h-[65vh] rounded-sm mb-8 gap-5"
+        className="flex flex-col justify-center items-center content bg-yellow-gradient w-full
+      text-center h-[65vh] rounded-md mb-8 md:gap-5 gap-2"
       >
         <div className="ourMission font-semibold text-gray1">
           {contentObj.title}
         </div>
-        <h1 className="text-[2.5rem] tracking-wider leading-[2.6rem] font-[450] w-6/12 mb-2">
+        <h1
+          className="md:text-[2.5rem] text-[1.8rem] tracking-wider leading-[2.2rem] md:leading-[2.6rem]
+         font-[450] w-10/12 md:w-7/12 mb-2"
+        >
           {contentObj.secTitle}
         </h1>
-        <div className="w-6/12 text-lg tracking-wider mb-3">
+        <div className="w-10/12 md:w-6/12 text-lg leading-[1.8rem] tracking-wider mb-3">
           {contentObj.paragraph}
         </div>
         <Button
@@ -32,16 +35,53 @@ export default function Advantage() {
           Learn More
         </Button>
       </div>
-      <div className="navigation flex flex-row gap-6 text-lg text-gray1">
-        {categories.map((category) => (
-          <Link onClick={() => setCategory(category)} href={"/"}>
-            {category}
+
+      <div className="navigation flex flex-row gap-6 text-base md:text-lg ">
+        <Link
+          onClick={() => setCategory("Mission")}
+          href={"/"}
+          className={`text-gray1 ${
+            category == "Mission" ? "text-black1 font-semibold" : ""
+          }`}
+        >
+          Mission
+        </Link>
+        <Link
+          onClick={() => setCategory("Experience")}
+          href={"/"}
+          className={`text-gray1 ${
+            category == "Experience" ? "text-black1 font-semibold" : ""
+          }`}
+        >
+          Experience
+        </Link>
+        <Link
+          onClick={() => setCategory("Efficient")}
+          href={"/"}
+          className={`text-gray1 ${
+            category == "Efficient" ? "text-black1 font-semibold" : ""
+          }`}
+        >
+          Efficient
+        </Link>
+        <Link
+          onClick={() => setCategory("Future")}
+          href={"/"}
+          className={`text-gray1 ${
+            category == "Future" ? "text-black1 font-semibold" : ""
+          }`}
+        >
+          Future
+        </Link>
+        {/* {categories.map((mapCategory) => (
+          <Link
+            onClick={() => setCategory(mapCategory)}
+            href={"/"}
+            className={"text-gray1"}
+          >
+            {mapCategory}
           </Link>
-        ))}
-        {/* <Link href={"/"}>Mission</Link>
-        <Link href={"/"}>Experience</Link>
-        <Link href={"/"}>Services</Link>
-        <Link href={"/"}>Capabilities</Link> */}
+        ))} */}
       </div>
     </div>
   )

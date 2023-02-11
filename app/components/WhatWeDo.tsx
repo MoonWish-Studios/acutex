@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function WhatWeDo() {
   return (
-    <div className="flex flex-col justify-center items-center md:items-start md:space-y-7 md:px-20 px-5 space-y-6 my-32 ">
+    <div className="flex flex-col justify-center items-center md:items-start md:space-y-7 md:px-20 px-5 space-y-6 mt-28 mb-64 ">
       <Image
         className="absolute right-0 top-200 -z-[999] w-80 md:w-[30rem]"
         src="/assets/rectangle.png"
