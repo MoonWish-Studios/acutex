@@ -1,26 +1,25 @@
-import WhatWeDo from "../components/WhatWeDo"
-import Advantage from "../components/Advantage"
-import Button, { WhiteButton } from "../components/Button"
+"use client"
 import React from "react"
 import Image from "next/image"
 import { nanoid } from "nanoid"
-
+import { WhiteButton } from "../components/Button"
 export default function Page() {
   return (
     <div className="w-full h-fit">
-      {/* <Landing
-        title="Payments Through Plastiq"
+      <Landing
+        title="How Can We Serve You?"
         background="/assets/gradient/lemon-gradient.png"
       >
-        <WhiteButton href="https://request.plastiq.com/pay-acutexusa">
+        <WhiteButton href="tel:310-982-2677">Call Us</WhiteButton>
+        {/* <WhiteButton href="https://request.plastiq.com/pay-acutexusa">
           <Image
             src="/assets/plastiq.svg"
             alt="Plastiq Logo"
             width="60"
             height="25"
           />
-        </WhiteButton>
-      </Landing> */}
+        </WhiteButton> */}
+      </Landing>
       <ContactForm />
     </div>
   )
@@ -28,7 +27,11 @@ export default function Page() {
 
 export function ContactForm() {
   return (
-    <form className="md:mx-auto flex flex-col mx-4  mb-16 gap-3  md:w-[40rem]">
+    <form
+      action="https://formspree.io/f/mjvdyeng"
+      method="post"
+      className="md:mx-auto flex flex-col mx-4 mt-16  mb-16 gap-3  md:w-[44rem]"
+    >
       <H3>General Information</H3>
       <TextInput
         label="First Name"
@@ -85,26 +88,19 @@ export function ContactForm() {
 
       <fieldset>
         <CheckboxSection title="Request Info For*">
-          <Checkbox label="Made in USA Knit Fabrics" description="" required />
-          <Checkbox
-            label="Marketing & Sales Opportunities"
-            description=""
-            required
-          />
+          <Checkbox label="Made in USA Knit Fabrics" description="" />
+          <Checkbox label="Marketing & Sales Opportunities" description="" />
           <Checkbox
             label="Core Styles"
             description="Jersey, Terry, Fleece, Rib, Thermal"
-            required
           />
           <Checkbox
             label="Custom Development"
             description="Novelty, Specialty, Functional, Certified, etc."
-            required
           />
           <Checkbox
             label="Garment Manufacturing"
             description="Including cut, sew, print, garment dye, etc."
-            required
           />
         </CheckboxSection>
       </fieldset>
@@ -143,6 +139,12 @@ export function ContactForm() {
         label="Message"
         icon="/assets/icons/contact/pencil-alt.svg"
         textarea
+      />
+      <input
+        type="submit"
+        value="Submit Inquiry"
+        className="bg-black1 text-white1 font-normal md:text-[1rem] text-[0.85rem] transition ease-in-out duration-100
+    outline-4 outline outline-[#00000005]  hover:scale-105 rounded-md py-3 px-4 hover:cursor-pointer"
       />
     </form>
   )
@@ -220,6 +222,7 @@ function Checkbox({
           id={label}
           type="checkbox"
           required={required}
+          name={label}
           value={label}
           className="w-[1.15rem]  h-[1.15rem] accent-green-600 bg-green-100 shadow border-green-300 rounded-md    "
         />
@@ -302,12 +305,12 @@ export function RadioInput({
     <div className={`relative ${className}`}>
       <select
         name={label}
+        defaultValue={defaultOption}
         id={label}
         className="focus:outline-2 focus:outline-neutral-200 transition pb-3 pt-6 px-4 w-full rounded-md bg-grayInput text-neutral-800 appearance-none  placeholder-neutral-800 text-base font-normal peer pr-10 hover:cursor-pointer "
         placeholder="Radio"
         required={required}
       >
-        <option selected>{defaultOption}</option>
         {options.map((option) => (
           <option value={option.toLowerCase()} key={nanoid()}>
             {option}
@@ -327,7 +330,7 @@ export function RadioInput({
           alt="Icon For Input"
           width="20"
           height="20"
-          className="absolute z-50 right-4 top-[1.30rem]"
+          className="absolute  z-50 right-4 top-[1.30rem]"
         />
       )}
     </div>
