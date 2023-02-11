@@ -17,7 +17,7 @@ export default function RootLayout({
       */}
       <head />
       <body className="font-[350] tracking-wider bg-white1">
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

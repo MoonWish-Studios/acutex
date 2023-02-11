@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer base {
+  .centered-axis-xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .centered-axis-y {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
