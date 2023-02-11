@@ -15,6 +15,8 @@ module.exports = {
         grayInput: "#F2F2F2",
         gray3: "#A3A3A3",
         white2: "#E9E9E9",
+        yellow1: "#FAAE3D",
+        green1: "#FAAE3D",
       },
       backgroundImage: {
         "yellow-gradient": "url('/assets/gradientbg.png')",
