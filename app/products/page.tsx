@@ -282,7 +282,7 @@ function Bold({ children }: { children: React.ReactNode }) {
 }
 function CardDetails({ title, heading, bullets }: CardDetailsParams) {
   return (
-    <div className="p-4">
+    <div className="px-8 py-4">
       <div className="font-medium text-sm bg-neutral-900  w-fit px-6 py-1 mb-2 rounded-full text-neutral-50">
         Exclusive
       </div>
