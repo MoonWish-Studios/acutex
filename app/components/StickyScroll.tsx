@@ -43,7 +43,7 @@ export default function StickyScroll() {
 
   return (
     <div className="md:grid md:grid-cols-1 lg:mx-20 md:mx-12 mx-6 xl:max-w-screen-2xl   mb-64">
-      <section className="flex flex-col gap-10 md:grid md:grid-cols-2  md:grid-rows-5 md:h-[145rem] items-start  justify-center">
+      <section className="flex flex-col gap-10 md:grid md:grid-cols-2  md:grid-rows-5 md:h-[125rem] items-start  justify-center">
         <div
           className={`md:block hidden self-start sticky lg:top-56 md:top-64 `}
         >
@@ -65,17 +65,19 @@ export default function StickyScroll() {
          `}
           >
             <h1 className="mb-4 text-3xl font-medium lg:text-3xl text-highlight">
-              Poop1
+              Our Vision
             </h1>
             <p
               className=" text-[1rem] leading-7 md:leading-[1.6rem] lg:leading-9 font-light
             tracking-wide md:text-[1rem] text-black1 "
             >
-              ACUTEX seeks to establish itself as a market leader in providing
-              the Most Outstanding customer service possible. Our goal is to
-              establish a long-term relationship with raving fans of our service
-              and commitment. Meeting and satisfying the needs of our valued
-              customers is paramount.
+              ACUTEX seeks to establish itself as a market leader in providing
+              the Most Outstanding customer service possible.  Our goal is to
+              establish long- term relationships with raving fans of our service
+              and commitment.  Meeting and satisfying the needs of our valued
+              partners is paramount. Passionate about textiles, creating
+              opportunities and providing positive impact we are actively
+              seeking ways to attract, educate and grow our industry.
             </p>
             <Button className="mt-4">Get In Touch</Button>
           </div>
@@ -100,17 +102,19 @@ export default function StickyScroll() {
          `}
           >
             <h1 className="mb-4 text-3xl font-medium lg:text-3xl text-highlight">
-              Poop2
+              Business With Integrity
             </h1>
             <p
               className=" text-[1rem] leading-7 md:leading-[1.6rem] lg:leading-9 font-light
             tracking-wide md:text-[1rem] text-black1 "
             >
-              ACUTEX seeks to establish itself as a market leader in providing
-              the Most Outstanding customer service possible. Our goal is to
-              establish a long-term relationship with raving fans of our service
-              and commitment. Meeting and satisfying the needs of our valued
-              customers is paramount.
+              Our motto and core business value!  ACUTEX holds each partnership
+              with customers and vendors as an integral part of the whole
+              business system.  Working and providing mutual loyalty,
+              profitability and value are key components to success.
+            </p>
+            <p className="text-md font-bold text-gray1 leading-10 tracking-wider">
+              SERVE. IMPROVE. GROW.
             </p>
             <Button className="mt-4">Get In Touch</Button>
           </div>
@@ -134,17 +138,15 @@ export default function StickyScroll() {
          `}
           >
             <h1 className="mb-4  text-3xl font-medium lg:text-3xl text-highlight">
-              Poop3
+              Providing Value
             </h1>
             <p
               className=" text-[1rem] leading-7 md:leading-[1.6rem] lg:leading-9 font-light
             tracking-wide md:text-[1rem] text-black1 "
             >
-              ACUTEX seeks to establish itself as a market leader in providing
-              the Most Outstanding customer service possible. Our goal is to
-              establish a long-term relationship with raving fans of our service
-              and commitment. Meeting and satisfying the needs of our valued
-              customers is paramount.
+              Your needs are our top priority.  You will never get a
+              high-pressured sales pitch.  You will never disappointed
+              with ACUTEX....We Guarantee it!
             </p>
             <Button className="mt-4">Get In Touch</Button>
           </div>

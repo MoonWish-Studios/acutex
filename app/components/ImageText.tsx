@@ -5,13 +5,13 @@ import Button from "./Button"
 
 export default function ImageText({
   reverse,
-
+  buttonText,
   title,
   children,
   img,
 }: {
   reverse: boolean
-
+  buttonText: string
   title: string
   children: any
   img: string
@@ -47,17 +47,22 @@ export default function ImageText({
             >
               {children}{" "}
             </p>
-            <Button className="mt-4">Learn More</Button>
+            <Button
+              href={buttonText == "Learn More" ? "/about" : "/contact"}
+              className="mt-4"
+            >
+              {buttonText}
+            </Button>
           </div>
         </div>
 
         <div className={`w-6/12 flex ${justifyState}`}>
           <Image
-            className={`imageSection ${
+            className={`imageSection rounded-lg ${
               reverse ? "lg:mr-14" : "lg:ml-14"
             } flex items-center   justify-center ${imgState}`}
             src={img}
-            width={390}
+            width={500}
             height={390}
             alt={""}
           />

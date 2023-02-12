@@ -29,6 +29,7 @@ export default function Advantage() {
           {contentObj.paragraph}
         </div>
         <Button
+          href={"/about"}
           className="border-white1 text-sm py-[13px] px-[48px] "
           reverse={true}
         >
@@ -41,7 +42,7 @@ export default function Advantage() {
           onClick={() => setCategory("Mission")}
           href={"/"}
           className={`text-gray1 ${
-            category == "Mission" ? "text-black1 font-semibold" : ""
+            category == "Mission" ? "text-black font-semibold" : ""
           }`}
         >
           Mission
@@ -50,7 +51,7 @@ export default function Advantage() {
           onClick={() => setCategory("Experience")}
           href={"/"}
           className={`text-gray1 ${
-            category == "Experience" ? "text-black1 font-semibold" : ""
+            category == "Experience" ? "text-black font-semibold" : ""
           }`}
         >
           Experience
@@ -59,7 +60,7 @@ export default function Advantage() {
           onClick={() => setCategory("Efficient")}
           href={"/"}
           className={`text-gray1 ${
-            category == "Efficient" ? "text-black1 font-semibold" : ""
+            category == "Efficient" ? "text-black font-semibold" : ""
           }`}
         >
           Efficient
@@ -68,7 +69,7 @@ export default function Advantage() {
           onClick={() => setCategory("Future")}
           href={"/"}
           className={`text-gray1 ${
-            category == "Future" ? "text-black1 font-semibold" : ""
+            category == "Future" ? "text-black font-semibold" : ""
           }`}
         >
           Future

@@ -16,13 +16,15 @@ export default function Action({}: {}) {
         </h1>
         <div
           className="text-[1.09rem] w-10/12 text-center md:text-left
-        leading-[1.5] md:w-7/12 lg:w-5/12 md:leading-[1.65] mb-5"
+        leading-[1.5] md:w-7/12 lg:w-6/12 md:leading-[1.65] mb-5"
         >
-          Lorem ipsum dolor sit amet consectetur. Orci faucibus faucibus blandit
-          at ut vivamus eget. Nunc ipsum bibendum nisl id at. Sed fermentum
-          montes{" "}
+           Whether you have a general textile question, want to develop a custom
+          fabric, place a special order or want to see what we have in our
+          current inventory we will be more than happy to be of assistance!
         </div>
-        <Button reverse={true}>View More</Button>
+        <Button href={"/contact"} reverse={true}>
+          View More
+        </Button>
       </div>
     </div>
   )
