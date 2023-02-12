@@ -2,6 +2,7 @@ import React from "react"
 import { Landing } from "../contact/page"
 import { WhiteButton } from "../components/Button"
 import Image from "next/image"
+import Link from "next/link"
 import { nanoid } from "nanoid"
 
 interface CardDetailsParams {
@@ -34,6 +35,9 @@ const exclusiveProducts = [
       "Durable and low pill",
       "PFD and custom pieced dye options",
       "Custom development fabric option",
+      "Special Treatments",
+      "Certifications",
+      "Value Added Services",
     ],
   },
 ]
@@ -58,14 +62,18 @@ export default function Page() {
   return (
     <div>
       {/* Landing Page */}
-      <div className="relative h-screen flex flex-col items-center justify-center gap-10 ">
-        {/* <Image src="" className="-z-50" fill alt="Background Of Landing Page" /> */}
+      <div className="relative h-[70vh] flex flex-col items-center justify-center gap-10 ">
         <h1
-          className="md:text-[4rem] text-[2.35rem] text-center md:w-8/12 w-10/12 font-bold text-neutral-900
+          className="md:text-[4rem] text-[2.35rem] text-center md:w-8/12 w-10/12 font-semibold text-neutral-900
        md:tracking-wider tracking-wide md:leading-[4.5rem] leading-[3.25rem]"
         >
-          The <GradientText>premium fabrics</GradientText> you need to serve
-          your brand now
+          The{" "}
+          <strong
+            className={`text-transparent font-bold bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500 `}
+          >
+            premium fabrics
+          </strong>{" "}
+          you need to serve your brand now
         </h1>
         <div className="buttonSection flex flex-row gap-5">
           <WhiteButton href="/contact">Get In Touch</WhiteButton>
@@ -168,7 +176,7 @@ export default function Page() {
             Various Fabric Styles And Constructions
           </p>
           <div className="flex flex-wrap max-w-3xl gap-4">
-            <BigBullet>FabriC Brushing</BigBullet>
+            <BigBullet>Functional Fabrics</BigBullet>
             <BigBullet>Novelty Fabrics</BigBullet>
             <BigBullet>Specialty Fabrics</BigBullet>
           </div>
@@ -184,7 +192,7 @@ export default function Page() {
       </div>
 
       {/* custom container */}
-      <section className="relative  py-20 px-6 md:px-4 lg:px-10 items-center gap-y-20 flex flex-col md:flex-row   md:justify-between lg:justify-center   lg:gap-x-20">
+      <section className="relative  py-20 px-6 md:px-4 lg:px-10 items-start gap-y-20 flex flex-col md:flex-row   md:justify-between lg:justify-center   lg:gap-x-20">
         <Image
           src="/assets/gradient/dust-gradient.png"
           className="-z-50"
@@ -250,6 +258,10 @@ export default function Page() {
               *below MOQ will require $2000 surcharge (reimbursable after
               minimum order is met)
             </p>
+
+            <p className="ml-6 text-neutral-500 mb-2 max-w-sm">
+              *for higher volume, please inquire for pricing and lead-times
+            </p>
           </div>
           {/* VOLUME PRICING TIERS */}
           <div className="flex flex-col gap-y-3 ml-4 mt-6">
@@ -276,6 +288,17 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <div className="flex flex-row justify-center w-full text-center py-2 bg-green-500  ">
+        <Link
+          target="_blank"
+          className="font-medium text-green-800"
+          rel="noopener noreferrer"
+          href={"https://www.acutexorganics.com"}
+        >
+          Click here if you are looking for
+          <Bold className="text-green-900">Organics by Acutex</Bold>
+        </Link>
+      </div>
     </div>
   )
 }

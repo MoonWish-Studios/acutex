@@ -1,14 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title>Home | Acutex</title>
+      <title>Payment | Acutex</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta
-        name="description"
-        content="We produce made in USA knitted fabrics for apparel brands and garment manufacturers. We pride ourselves 
-        in our outstanding customer service and we are passionate about textiles, creating opportunities 
-        and providing positive impact we are actively seeking ways to attract, educate and grow our industry."
-      />
+      <meta name="description" content="Payment Page" />
       <meta
         name="keywords"
         content="textile manufacturer, Buena Park, CA, solutions, custom fabric, special order, current inventory, assistance, 
@@ -20,6 +15,7 @@ export default function Head() {
          textile solutions provider, textile products, fabric products, Buena Park textile solutions, 
          textile solutions provider, textile solutions expert"
       />
+      <meta property="og:type" content="website" />
       <link rel="icon" href="/assets/favicon.png" />
     </>
   )

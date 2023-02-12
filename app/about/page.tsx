@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "../components/Button"
+import Button, { WhiteButton } from "../components/Button"
 import StickyScroll from "../components/StickyScroll"
 import Action from "../components/Action"
 import QuoteText from "../components/QuoteText"
@@ -12,7 +12,7 @@ export default function About() {
         title="About Us"
         background="/assets/gradient/lemon-gradient.png"
       >
-        <Button reverse={true}>Products</Button>
+        <WhiteButton href="/products">Products</WhiteButton>
       </Landing>
 
       <div className="w-full mt-40 flex justify-center">
