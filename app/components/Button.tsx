@@ -50,7 +50,7 @@ export function WhiteButton({
     <Link
       href={`${href}`}
       className={`inline-block text-center max-w-fit font-medium outline-4 outline outline-[#00000005]       md:text-[1rem] text-[0.85rem] transition ease-in-out duration-100 bg-white
-      box-border hover:scale-105 rounded-[0.23rem] px-16 my-0 py-4 ${className} `}
+      box-border hover:scale-105 rounded-[0.23rem]   px-16 my-0 py-4 ${className} `}
     >
       {children}
     </Link>

@@ -33,7 +33,7 @@ export function ContactForm() {
   // }
   return (
     <form
-      action="https://formspree.io/f/mjvdyeng"
+      action="https://formspree.io/f/xqkopgav"
       method="post"
       // onSubmit={handleSubmit}
       className="md:mx-auto flex flex-col mx-4 mt-16  mb-16 gap-3  md:w-[44rem]"
@@ -130,12 +130,12 @@ export function ContactForm() {
         {/* <p className="absolute text-md text-neutral-500 duration-300 transform -translate-x-4 -translate-y-8 scale-75 "> */}
         {/* Choose Your Type */}
         {/* </p> */}
-        <CheckboxSection title="" className="col-span-2">
-          <Checkbox
-            label="Please Analyze My Fabric"
-            description='Mail 8"x8" swatch to address below'
-          />
-        </CheckboxSection>
+        {/* <CheckboxSection title="" className="col-span-2"> */}
+        <Checkbox
+          label="Please Analyze My Fabric"
+          description='Mail 8"x8" swatch to address below'
+        />
+        {/* </CheckboxSection> */}
         <p className="my-2 col-span-2">
           Please Provide As Much Information As Possible
         </p>

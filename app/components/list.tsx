@@ -94,9 +94,9 @@ export function BigBullet({
   className?: string
 }) {
   return (
-    <li className="bg-grayInput px-6 shadow py-2 w-fit rounded-lg flex items-center text-xl font-normal text-neutral-900 ">
+    <li className="bg-grayInput px-4 shadow py-1.5 w-fit rounded-lg flex items-center text-sm md:text-lg font-normal text-neutral-900 ">
       <svg
-        className="w-9 h-9 mr-1.5 my-2 text-neutral-300  flex-shrink-0"
+        className="w-5 h-5 md:w-6 md:h-6 mr-1.5 my-2 text-neutral-300  flex-shrink-0"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

@@ -105,9 +105,9 @@ export default function Page() {
           <h1 className="font-semibold text-3xl md:text-5xl ">Core Styles</h1>
           <h3 className="text-xl font-medium md:text-3xl text-neutral-900  my-4 max-w-2xl leading-tight">
             Designed to be easily converted into{" "}
-            <GradientText className="font-semibold bg-gradient-to-r from-green-300 to-lime-400 whitespace-nowrap">
+            <strong className=" text-transparent bg-clip-text  font-semibold bg-gradient-to-r from-blue-500 to-cyan-600 whitespace-nowrap">
               sustainable/eco-friendly
-            </GradientText>{" "}
+            </strong>{" "}
             and <Bold className="italic">"Berry Complaint"</Bold> fabrics
           </h3>
           <div className="flex flex-wrap max-w-3xl gap-4">
@@ -140,15 +140,15 @@ export default function Page() {
         />{" "}
       </div>
       {/* Custom Development */}
-      <div className=" relative py-20   text-neutral-50  items-center flex overflow-hidden justify-center md:justify-end">
+      <div className=" relative py-20   text-neutral-800  items-center flex overflow-hidden justify-center md:justify-end">
         <div className="z-50 relative max-w-lg md:max-w-2xl lg:mr-20 xl:mr-40  px-4 sm:px-4 md:pl-20">
           <h1 className="font-semibold  text-3xl md:text-5xl ">
             Custom Development
           </h1>
-          <h3 className="text-xl md:text-3xl font-medium text-neutral-50  my-4 pr-4 md:max-w-2xl leading-tight">
-            <GradientText className="font-semibold from-green-300 to-lime-400 whitespace-nowrap">
+          <h3 className="text-xl md:text-3xl font-medium text-neutral-800  my-4 pr-4 md:max-w-2xl leading-tight">
+            <strong className=" text-transparent bg-clip-text  font-semibold bg-gradient-to-r from-blue-500 to-cyan-600 whitespace-nowrap">
               Custom fabric designs&nbsp;
-            </GradientText>
+            </strong>
             and qualities for your specification and needs
           </h3>
           <div className="flex flex-wrap max-w-3xl gap-4">
