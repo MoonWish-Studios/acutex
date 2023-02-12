@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         "yellow-gradient": "url('/assets/gradientbg.png')",
         "cloth-bg": "url('/assets/actionbg.png')",
+        "whatwedo-bg": "url('/assets/whatwedo.png')",
       },
     },
   },

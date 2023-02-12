@@ -11,7 +11,7 @@ export default function Advantage() {
   const contentObj = determineContent(category)
 
   return (
-    <div className="flex flex-col w-full justify-center items-center md:px-20 px-5 mb-20">
+    <div className="flex flex-col w-full justify-center items-center md:px-20 px-5 mb-32">
       <div
         className="flex flex-col justify-center items-center content bg-yellow-gradient bg-cover w-full
       text-center h-[65vh] rounded-md mb-8 md:gap-5 gap-2"
