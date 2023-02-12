@@ -54,7 +54,7 @@ export default function Page() {
         >
           The{" "}
           <strong
-            className={`text-transparent font-bold bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500 `}
+            className={`text-transparent font-semibold bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500 `}
           >
             premium fabrics
           </strong>{" "}
