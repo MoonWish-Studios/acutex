@@ -1,9 +1,9 @@
 import React from "react"
-import { Landing } from "../contact/page"
 import Button from "../components/Button"
 import { WhiteButton } from "../components/Button"
 import Image from "next/image"
-import { BigBullet, Bold } from "../products/page"
+import { Landing } from "../components/ContactForm"
+import { BigBullet, Bold } from "../components/list"
 
 export default function Payment() {
   return (

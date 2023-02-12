@@ -3,8 +3,7 @@ import Button, { WhiteButton } from "../components/Button"
 import StickyScroll from "../components/StickyScroll"
 import Action from "../components/Action"
 import QuoteText from "../components/QuoteText"
-import { Landing } from "../contact/page"
-
+import { Landing } from "../components/ContactForm"
 export default function About() {
   return (
     <div className="mb-10">
