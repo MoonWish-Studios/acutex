@@ -95,7 +95,7 @@ export function ContactForm() {
       <fieldset>
         <RadioInput
           multiple
-          label="Choose Your Inquiry Urgency"
+          label="Request Information For"
           // icon="/assets/icons/contact/cheveron-down.svg"
           // defaultOption="Choose Urgency"
           className=""
