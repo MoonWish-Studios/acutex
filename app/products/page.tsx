@@ -20,6 +20,9 @@ const exclusiveProducts = [
       "Eco-friendly dye process for custom colors",
       "Complete garment dyeing instructions",
       "Custom development fabric options",
+      "Special Treatments",
+      "Certifications",
+      "Value Added Services",
     ],
   },
   {
@@ -112,7 +115,7 @@ export default function Page() {
             <GradientText className="font-semibold bg-gradient-to-r from-green-300 to-lime-400 whitespace-nowrap">
               sustainable/eco-friendly
             </GradientText>{" "}
-            and berry compliant fabrics
+            and <Bold className="italic">"Berry Complaint"</Bold> fabrics
           </h3>
           <div className="flex flex-wrap max-w-3xl gap-4">
             <BigBullet>Limited Stock Availbility</BigBullet>
@@ -130,7 +133,7 @@ export default function Page() {
               Jersey with and without <Bold>Spandex</Bold>
             </BigBullet>
             <BigBullet>
-              <Bold>Fleece</Bold>&nbsp;- Light To Heavy
+              <Bold>Terry & Fleece</Bold>&nbsp;- Light To Heavy
             </BigBullet>
           </div>
         </div>
@@ -277,8 +280,14 @@ export default function Page() {
   )
 }
 
-export function Bold({ children }: { children: React.ReactNode }) {
-  return <strong className="font-bold ">&nbsp;{children}</strong>
+export function Bold({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return <strong className={`font-bold ${className}`}>&nbsp;{children}</strong>
 }
 function CardDetails({ title, heading, bullets }: CardDetailsParams) {
   return (
@@ -341,26 +350,20 @@ export function BigBullet({
   className?: string
 }) {
   return (
-    <li
-      className={`bg-grayInput px-3 md:px-5 py-1 w-fit rounded-lg transition  flex items-center text-sm md:text-base font-normal text-neutral-900 shadow ${className}`}
-    >
-      {textAsIcon === false ? (
-        <svg
-          className="w-5 h-5 md:w-6 md:h-6 mr-0 md:mr-1.5 my-2 text-neutral-300  flex-shrink-0"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      ) : (
-        <strong className="font-bold py-2.5">{text}</strong>
-      )}
-      &nbsp;&nbsp;{children}
+    <li className="bg-grayInput px-6 shadow py-2 w-fit rounded-lg flex items-center text-xl font-normal text-neutral-900 ">
+      <svg
+        className="w-9 h-9 mr-1.5 my-2 text-neutral-300  flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      {children}
     </li>
   )
 }

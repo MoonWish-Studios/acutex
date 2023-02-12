@@ -16,7 +16,7 @@ const efficient = {
   title: "We Are Efficient",
   secTitle: "Quick turn 3-4 week lead times",
   paragraph:
-    "Our products are made in USA which means we have on demand speed. Our experience has also allowed us to optimized processes to ensure a smooth experienec for our customers",
+    "Our products are made in USA which means we have on demand speed. Our experience has also allowed us to optimized processes to ensure a smooth experience for our customers",
 }
 const future = {
   title: "Coming Soon",

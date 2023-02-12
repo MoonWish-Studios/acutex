@@ -72,23 +72,21 @@ export default function Footer() {
             <p className="font-semibold">COMPANY</p>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
-              href=""
+              href="/"
             >
               Home
             </Link>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="/products"
+              href="/about"
             >
-              Products
+              About
             </Link>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
-              href="/appointment"
+              href="/products"
             >
-              Appointment
+              Products
             </Link>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
