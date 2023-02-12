@@ -21,11 +21,11 @@ export default function Advantage() {
         </div>
         <h1
           className="md:text-[2.5rem] text-[1.8rem] tracking-wider leading-[2.2rem] md:leading-[2.6rem]
-         font-[450] w-10/12 md:w-7/12 mb-2"
+         font-[450] w-10/12 md:w-10/12 lg:w-7/12 mb-2"
         >
           {contentObj.secTitle}
         </h1>
-        <div className="w-10/12 md:w-6/12 text-lg leading-[1.8rem] tracking-wider mb-3">
+        <div className="w-10/12 lg:w-6/12 md:w-9/12 text-lg leading-[1.8rem] tracking-wider mb-3">
           {contentObj.paragraph}
         </div>
         <Button

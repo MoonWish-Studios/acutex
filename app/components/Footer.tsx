@@ -78,8 +78,6 @@ export default function Footer() {
             </Link>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
-              target="_blank"
-              rel="noopener noreferrer"
               href="/contact"
             >
               Contact
