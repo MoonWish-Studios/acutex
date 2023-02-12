@@ -13,7 +13,7 @@ export default function WhatWeDo() {
         alt={""}
       />
       <h1 className="font-semibold lg:text-[2.75rem] text-[2.3rem]">
-        What we do
+        Get in Touch with a Textile Specialist
       </h1>
       <div className="paragraphs text-lg flex items-center text-center md:text-start flex-col md:flex-row gap-6">
         <div
