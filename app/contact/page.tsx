@@ -1,8 +1,9 @@
 "use client"
-import React from "react"
+import React, { FormEvent } from "react"
 import Image from "next/image"
 import { nanoid } from "nanoid"
 import { WhiteButton } from "../components/Button"
+import { Bold } from "../products/page"
 export default function Page() {
   return (
     <div className="w-full h-fit">
@@ -21,15 +22,110 @@ export default function Page() {
         </WhiteButton> */}
       </Landing>
       <ContactForm />
+
+      <div className="flex flex-col items-center md:flex-row gap-32 justify-center bg-neutral-100 py-20">
+        <div className="w-72 space-y-4 ">
+          <Image
+            src="/assets/logo.png"
+            width="250"
+            height="100"
+            alt="acutex logo"
+            className="mb-4"
+          />
+          <p className="font-medium text-lg">
+            <Bold>Monday-Friday</Bold> 9am - 5pm
+          </p>
+          <p className="font-medium text-lg">
+            <Bold>Saturday</Bold> By Appointment
+          </p>
+          <p className="font-medium text-lg">
+            <Bold>Sunday</Bold> Closed
+          </p>
+        </div>
+        <div className="ml-5 md:ml-0 w-72">
+          <h1 className="text-3xl font-medium text-neutral-800">
+            Our Information
+          </h1>
+          <TextWithIcon src="/assets/icons/mail.svg" alt="Phone Icon">
+            contact@acutexusa.com
+          </TextWithIcon>
+          <TextWithIcon src="/assets/icons/phone.svg" alt="Phone Icon">
+            (310) 982-2677
+          </TextWithIcon>
+          <TextWithIcon
+            src="/assets/icons/home.svg"
+            alt="Phone Icon"
+            className=""
+          >
+            7050 Village Drive, Unit I, Buena Park, CA 90621, USA
+          </TextWithIcon>
+        </div>
+      </div>
+
+      <div></div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.7887734590117!2d-118.01097688449941!3d33.86933413479353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cac7404330bd%3A0xdf24354b53b945b9!2sUFG%2C%20Inc.%20dba%20ACUTEX!5e0!3m2!1sen!2sus!4v1676181860954!5m2!1sen!2sus"
+        className="w-full h-[75vh]"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  )
+}
+
+function TextWithIcon({
+  children,
+  src,
+  alt,
+  className,
+}: {
+  children: React.ReactNode
+  src: string
+  alt: string
+  className?: string
+}) {
+  return (
+    <div className="flex items-baseline my-5 font-normal text-neutral-800  gap-x-2">
+      <Image src={src} width={20} height={20} alt={alt} />
+      <p>{children}</p>
     </div>
   )
 }
 
 export function ContactForm() {
+  // const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault()
+
+  //   const form = event.target as HTMLFormElement
+  //   console.log(form.elements)
+
+  //   const formData = Object.fromEntries(new FormData(form).entries())
+
+  //   const filteredData = {
+  //     "First Name": formData["First Name"],
+  //     "Last Name": formData["Last Name"],
+  //     "Company Name": formData["Company Name"],
+  //     "Position Name": formData["Position Name"],
+  //     Email: formData["Email"],
+  //     Telephone: formData["Telephone"],
+  //     "Inquiry Type": formData["Inquiry Type"], // the chosoe your type shouldn't be in here
+  //     "Choose Your Inquiry Urgency": formData["Choose Your Inquiry Urgency"],
+  //     "Fabric Width (Inches)": formData["Fabric Width (Inches)"],
+  //     "Fabric Weight (GSM)": formData["Fabric Weight (GSM)"],
+  //     "Linear Oz": formData["Linear Oz"],
+  //     "Country Of Origin": formData["Country Of Origin"],
+  //     "Fabric Content": formData["Fabric Content"],
+  //     "Fabric Goal": formData["Fabric Goal"],
+  //     "Other Instructions": formData["Other Instructions"],
+  //     Message: formData["Message"],
+  //   }
+  //   console.log(filteredData)
+  // }
   return (
     <form
       action="https://formspree.io/f/mjvdyeng"
       method="post"
+      // onSubmit={handleSubmit}
       className="md:mx-auto flex flex-col mx-4 mt-16  mb-16 gap-3  md:w-[44rem]"
     >
       <H3>General Information</H3>
@@ -87,8 +183,23 @@ export function ContactForm() {
       />
 
       <fieldset>
-        <CheckboxSection title="Request Info For*">
-          <Checkbox label="Made in USA Knit Fabrics" description="" />
+        <RadioInput
+          multiple
+          label="Choose Your Inquiry Urgency"
+          // icon="/assets/icons/contact/cheveron-down.svg"
+          // defaultOption="Choose Urgency"
+          className=""
+          options={[
+            "Made In USA Knit Fabrics",
+            "Marketing & Sales Opportunities",
+            "Core Styles",
+            "Custom Development",
+            "Garment Manufacturing",
+          ]}
+          required
+        />
+        {/* <CheckboxSection title="Request Info For*"> */}
+        {/* <Checkbox label="Made in USA Knit Fabrics" description="" />
           <Checkbox label="Marketing & Sales Opportunities" description="" />
           <Checkbox
             label="Core Styles"
@@ -102,7 +213,7 @@ export function ContactForm() {
             label="Garment Manufacturing"
             description="Including cut, sew, print, garment dye, etc."
           />
-        </CheckboxSection>
+        </CheckboxSection> */}
       </fieldset>
       <H3>Free Fabric Assessment (optional)</H3>
       <fieldset className="flex flex-col md:grid md:grid-flow-row gap-y-4 gap-x-2 md:grid-cols-2 transition w-full rounded-md">
@@ -181,8 +292,9 @@ interface CustomTextInput extends CustomInputParams {
   half?: boolean
 }
 interface CustomDropdownParams extends CustomInputParams {
-  defaultOption: string
+  defaultOption?: string
   options: string[]
+  multiple?: boolean
 }
 interface CustomCheckboxParams extends CustomInputParams {
   description: string
@@ -297,12 +409,13 @@ export function RadioInput({
   label,
   icon,
   required = false,
+  multiple = false,
   defaultOption,
   options,
   className,
 }: CustomDropdownParams) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className} `}>
       <select
         name={label}
         defaultValue={defaultOption}
@@ -310,9 +423,11 @@ export function RadioInput({
         className="focus:outline-2 focus:outline-neutral-200 transition pb-3 pt-6 px-4 w-full rounded-md bg-grayInput text-neutral-800 appearance-none  placeholder-neutral-800 text-base font-normal peer pr-10 hover:cursor-pointer "
         placeholder="Radio"
         required={required}
+        multiple={multiple}
       >
+        {defaultOption && <option>{defaultOption}</option>}
         {options.map((option) => (
-          <option value={option.toLowerCase()} key={nanoid()}>
+          <option value={option} className="whitespace-normal" key={nanoid()}>
             {option}
           </option>
         ))}
@@ -320,7 +435,7 @@ export function RadioInput({
 
       <label
         htmlFor={label}
-        className="absolute text-md text-neutral-500 duration-300 transform -translate-y-4 scale-75 top-[1.20rem] z-10 origin-[0] left-4"
+        className="bg-grayInput  pr-4 absolute text-md text-neutral-500 duration-300 transform -translate-y-4 scale-75 top-[1.20rem] z-10 origin-[0] left-4 "
       >
         {label}
       </label>

@@ -277,7 +277,7 @@ export default function Page() {
   )
 }
 
-function Bold({ children }: { children: React.ReactNode }) {
+export function Bold({ children }: { children: React.ReactNode }) {
   return <strong className="font-bold ">&nbsp;{children}</strong>
 }
 function CardDetails({ title, heading, bullets }: CardDetailsParams) {
