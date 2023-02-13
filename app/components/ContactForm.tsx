@@ -68,6 +68,7 @@ export function ContactForm() {
       <TextInput
         label="Telephone"
         icon="/assets/icons/contact/phone.svg"
+        pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
         required
         type="tel"
       />
@@ -92,24 +93,23 @@ export function ContactForm() {
         required
       />
 
-      <fieldset>
-        <RadioInput
-          multiple
-          label="Request Information For"
-          // icon="/assets/icons/contact/cheveron-down.svg"
-          // defaultOption="Choose Urgency"
-          className=""
-          options={[
-            "Made In USA Knit Fabrics",
-            "Marketing & Sales Opportunities",
-            "Core Styles",
-            "Custom Development",
-            "Garment Manufacturing",
-          ]}
-          required
-        />
-        {/* <CheckboxSection title="Request Info For*"> */}
-        {/* <Checkbox label="Made in USA Knit Fabrics" description="" />
+      <RadioInput
+        multiple
+        label="Request Information For (Select Below)"
+        // icon="/assets/icons/contact/cheveron-down.svg"
+        // defaultOption="Choose Urgency"
+        className=""
+        options={[
+          "Made In USA Knit Fabrics",
+          "Marketing & Sales Opportunities",
+          "Core Styles",
+          "Custom Development",
+          "Garment Manufacturing",
+        ]}
+        required
+      />
+      {/* <CheckboxSection title="Request Info For*"> */}
+      {/* <Checkbox label="Made in USA Knit Fabrics" description="" />
           <Checkbox label="Marketing & Sales Opportunities" description="" />
           <Checkbox
             label="Core Styles"
@@ -124,7 +124,6 @@ export function ContactForm() {
             description="Including cut, sew, print, garment dye, etc."
           />
         </CheckboxSection> */}
-      </fieldset>
       <H3>Free Fabric Assessment (optional)</H3>
       <fieldset className="flex flex-col md:grid md:grid-flow-row gap-y-4 gap-x-2 md:grid-cols-2 transition w-full rounded-md">
         {/* <p className="absolute text-md text-neutral-500 duration-300 transform -translate-x-4 -translate-y-8 scale-75 "> */}
@@ -200,6 +199,7 @@ interface CustomTextInput extends CustomInputParams {
   textarea?: boolean
   type?: InputTypes
   half?: boolean
+  pattern?: string
 }
 interface CustomDropdownParams extends CustomInputParams {
   defaultOption?: string
@@ -271,6 +271,7 @@ export function TextInput({
   half = false,
   required = false,
   className,
+  pattern,
 }: CustomTextInput) {
   return (
     <div className={`relative ${half ? "w-1/2" : "w-full"} ${className} `}>
@@ -286,12 +287,13 @@ export function TextInput({
         <input
           name={label}
           id={label}
-          className={`focus:outline-2 focus:outline-neutral-200 transition pb-3 pt-6 px-4 w-full rounded-md bg-grayInput text-neutral-800 appearance-none placeholder-neutral-800 text-base peer pr-10 shadow-sm ${
+          className={`focus:outline-2 focus:outline-neutral-200 transition pb-3 pt-6 px-4 w-full rounded-md bg-grayInput text-neutral-800 appearance-none  placeholder-neutral-800 text-base peer pr-10 shadow-sm ${
             half && "shadow-md"
           } `}
           type={type}
           placeholder="  "
           required={required}
+          pattern={pattern && pattern}
         />
       )}
 
@@ -322,20 +324,24 @@ export function RadioInput({
   multiple = false,
   defaultOption,
   options,
-  className,
+  className = "",
 }: CustomDropdownParams) {
   return (
     <div className={`relative ${className} `}>
       <select
         name={label}
-        defaultValue={defaultOption}
+        // defaultValue={defaultOption}
         id={label}
         className="focus:outline-2 focus:outline-neutral-200 transition pb-3 pt-6 px-4 w-full rounded-md bg-grayInput text-neutral-800 appearance-none  placeholder-neutral-800 text-base font-normal peer pr-10 hover:cursor-pointer "
         placeholder="Radio"
         required={required}
         multiple={multiple}
       >
-        {defaultOption && <option>{defaultOption}</option>}
+        {defaultOption && (
+          <option value={""} className="whitespace-normal">
+            {defaultOption}
+          </option>
+        )}
         {options.map((option) => (
           <option value={option} className="whitespace-normal" key={nanoid()}>
             {option}
@@ -348,6 +354,7 @@ export function RadioInput({
         className="bg-grayInput  pr-4 absolute text-md text-neutral-500 duration-300 transform -translate-y-4 scale-75 top-[1.20rem] z-10 origin-[0] left-4 "
       >
         {label}
+        {required && "*"}
       </label>
       {icon && (
         <Image

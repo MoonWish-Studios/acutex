@@ -3,6 +3,23 @@ export default function Head() {
     <>
       <title>Home | Acutex</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta name="author" content="UFG, Inc." />
+
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:image"
+        content="https://raw.githubusercontent.com/MoonWish-Studios/acutex/main/public/assets/sticky3.png"
+      />
+      <meta property="og:locale" content="en_US" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="UFG, Inc." />
+      <meta name="twitter:description" content="Welcome to ACUTEX" />
+      <meta
+        name="twitter:image"
+        content="https://raw.githubusercontent.com/MoonWish-Studios/acutex/main/public/assets/sticky3.png"
+      />
+      <meta name="twitter:image:alt" content="UFG, Inc." />
+
       <meta
         name="description"
         content="We produce made in USA knitted fabrics for apparel brands and garment manufacturers. We pride ourselves 
