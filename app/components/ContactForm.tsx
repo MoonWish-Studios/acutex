@@ -33,8 +33,8 @@ export function ContactForm() {
   // }
   return (
     <form
-      action="https://formspree.io/f/xoqbgoov"
-      // action="https://formspree.io/f/xqkopgav"
+      // action="https://formspree.io/f/xoqbgoov"
+      action="https://formspree.io/f/xqkopgav"
       method="post"
       // onSubmit={handleSubmit}
       className="md:mx-auto flex flex-col mx-4 mt-16  mb-16 gap-3  md:w-[44rem]"
@@ -344,7 +344,19 @@ export function RadioInput({
           </option>
         )}
         {options.map((option) => (
-          <option value={option} className="whitespace-normal" key={nanoid()}>
+          <option
+            onMouseDown={(e: React.MouseEvent<HTMLOptionElement>) => {
+              const target = e.target as HTMLOptionElement
+              if (target.parentElement) {
+                console.log(target.parentElement.focus())
+                e.preventDefault()
+                target.selected = !target.selected
+              }
+            }}
+            value={option}
+            className="whitespace-normal"
+            key={nanoid()}
+          >
             {option}
           </option>
         ))}
