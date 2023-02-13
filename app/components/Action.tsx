@@ -25,7 +25,7 @@ export default function Action({}: {}) {
           current inventory we will be more than happy to be of assistance!
         </div>
         <Button className="relative z-[50]" href={"/contact"} reverse={true}>
-          View More
+          Contact Us
         </Button>
       </div>
     </div>
