@@ -84,7 +84,7 @@ export default function StickyScroll() {
         </div>
         <Image
           className="md:hidden block"
-          src={`/assets/building.png`}
+          src={`/assets/sticky1.png`}
           alt={""}
           height={450}
           width={600}
@@ -121,7 +121,7 @@ export default function StickyScroll() {
         </div>
         <Image
           className="md:hidden block"
-          src={`/assets/building.png`}
+          src={`/assets/sticky2.png`}
           alt={""}
           height={450}
           width={600}
@@ -153,7 +153,7 @@ export default function StickyScroll() {
         </div>
         <Image
           className="md:hidden block"
-          src={`/assets/building.png`}
+          src={`/assets/sticky3.png`}
           alt={""}
           height={450}
           width={600}

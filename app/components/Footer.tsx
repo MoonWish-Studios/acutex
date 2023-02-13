@@ -20,33 +20,12 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <div className="flex justify-center pb-3 space-x-4">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/farwestuniforms/"
-            ></Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.yelp.com/biz/farwest-uniforms-and-embroidery-garden-grove-2?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
-            ></Link>
-          </div>
         </div>
         {/* Contact List */}
         <div className="flex flex-col justify-start text-sm sm:flex-row gap-y-10 sm:justify-evenly sm:space-x-20 md:space-x-40 ">
           <div className="flex flex-col md:w-2/5 w-4/5 space-y-4">
             <p className="font-semibold">INFO</p>
-            <div className="flex flex-row items-center flex-shrink-0 space-x-2 w-fit text-base tracking-wide  text-black1">
-              <Image
-                className=""
-                src={"/assets/icons/mail.svg"}
-                alt={""}
-                height={10}
-                width={20}
-              />
-              <p>contact@acutexusa.com</p>
-            </div>
+
             <div className="flex flex-row items-center flex-shrink-0 space-x-2 w-fit text-base tracking-wide  text-black1">
               <Image
                 src={"/assets/icons/phone.svg"}
@@ -55,6 +34,15 @@ export default function Footer() {
                 width={20}
               />
               <p>(310) 982-2677</p>
+            </div>
+            <div className="flex flex-row items-center flex-shrink-0 space-x-2 w-fit text-base tracking-wide  text-black1">
+              <Image
+                src={"/assets/icons/fax.svg"}
+                alt={""}
+                height={18}
+                width={20}
+              />
+              <p>Fax: (310) 982-2651</p>
             </div>
             <div className="flex items-start space-x-2 w-fit text-base tracking-wide  text-black1">
               <Image
@@ -90,8 +78,6 @@ export default function Footer() {
             </Link>
             <Link
               className="hover:text-gray3 text-black1 text-base tracking-wide"
-              target="_blank"
-              rel="noopener noreferrer"
               href="/contact"
             >
               Contact
@@ -99,7 +85,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-[1px] border-slate-500/50  w-full flex items-center justify-center text-gray3 text-sm pt-5 pb-5">
+      <div className="border-[1px] border-slate-500/50  w-full flex text-center items-center justify-center text-gray3 text-sm pt-5 pb-5">
         {new Date().getFullYear()} UFG, Inc. dba ACUTEX – ALL RIGHTS RESERVED.
       </div>
     </footer>

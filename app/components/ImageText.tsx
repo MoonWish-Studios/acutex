@@ -56,7 +56,7 @@ export default function ImageText({
           </div>
         </div>
 
-        <div className={`w-8/12v  md:w-96  flex ${justifyState}`}>
+        <div className={`w-8/12  md:w-[30rem]  flex ${justifyState}`}>
           <Image
             className={`imageSection rounded-lg ${
               reverse ? "lg:mr-8" : "lg:ml-8"

@@ -22,8 +22,8 @@ export default function QuoteText() {
         <div className="text-center md:text-left md:w-6/12">
           Our founder is passionate about textiles with 20 plus years
           experience; extensive career in direct sales; rooted in customer
-          service; inspiring Christian values, wants to leave a positive impact
-          on the world!.
+          service; reflecting God's grace, wants to leave a positive impact on
+          the world!
         </div>
       </div>
       <figure className="max-w-screen-md mx-auto text-center">

@@ -48,9 +48,7 @@ export default function Page() {
           <h1 className="text-3xl font-medium text-neutral-800">
             Our Information
           </h1>
-          <TextWithIcon src="/assets/icons/mail.svg" alt="Phone Icon">
-            contact@acutexusa.com
-          </TextWithIcon>
+
           <TextWithIcon src="/assets/icons/phone.svg" alt="Phone Icon">
             (310) 982-2677
           </TextWithIcon>
