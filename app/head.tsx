@@ -30,7 +30,7 @@ export default function Head() {
         name="keywords"
         content="textile manufacturer, Buena Park, CA, solutions, custom fabric, special order, current inventory, assistance, 
         general textile question, serve needs, made in usa textile,
-        textile company, fabric solutions, custom textile, textile inventory, textile assistance, textile experts, 
+      textile company, fabric solutions, custom textile, textile inventory, textile assistance, textile experts, 
         fabric development, textile ordering, Buena Park textile manufacturer,
          textile questions, textile service provider, textile industry, fabric production, textile production, 
          fabric solutions provider, custom fabric development, fabric specialists, 
