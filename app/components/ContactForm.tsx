@@ -93,7 +93,7 @@ export function ContactForm() {
         required
       />
 
-      <RadioInput
+      {/* <RadioInput
         multiple
         label="Request Information For (Select Below)"
         // icon="/assets/icons/contact/cheveron-down.svg"
@@ -107,10 +107,9 @@ export function ContactForm() {
           "Garment Manufacturing",
         ]}
         required
-      />
-      {/* <CheckboxSection title="Request Info For*">
+      /> */}
+      <CheckboxSection title="Request Info For*">
         <Checkbox label="Made in USA Knit Fabrics" description="" />
-        <Checkbox label="Marketing & Sales Opportunities" description="" />
         <Checkbox
           label="Core Styles"
           description="Jersey, Terry, Fleece, Rib, Thermal"
@@ -119,11 +118,12 @@ export function ContactForm() {
           label="Custom Development"
           description="Novelty, Specialty, Functional, Certified, etc."
         />
+        <Checkbox label="Marketing & Sales Opportunities" description="" />
         <Checkbox
           label="Garment Manufacturing"
           description="Including cut, sew, print, garment dye, etc."
         />
-      </CheckboxSection> */}
+      </CheckboxSection>
       <H3>Free Fabric Assessment (optional)</H3>
       <fieldset className="flex flex-col md:grid md:grid-flow-row gap-y-4 gap-x-2 md:grid-cols-2 transition w-full rounded-md">
         {/* <p className="absolute text-md text-neutral-500 duration-300 transform -translate-x-4 -translate-y-8 scale-75 "> */}
