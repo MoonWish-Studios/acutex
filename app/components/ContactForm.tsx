@@ -33,7 +33,6 @@ export function ContactForm() {
   // }
   return (
     <form
-      // action="https://formspree.io/f/xoqbgoov"
       action="https://formspree.io/f/xqkopgav"
       method="post"
       // onSubmit={handleSubmit}
