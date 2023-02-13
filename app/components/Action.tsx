@@ -20,7 +20,7 @@ export default function Action({}: {}) {
           className="relative z-[50] text-[1.09rem] w-10/12 md:font-normal font-[420] text-center md:text-left
         leading-[1.5] md:w-7/12 lg:w-6/12 md:leading-[1.65] mb-5"
         >
-           Whether you have a general textile question, want to develop a custom
+          Whether you have a general textile question, want to develop a custom
           fabric, place a special order or want to see what we have in our
           current inventory we will be more than happy to be of assistance!
         </div>
