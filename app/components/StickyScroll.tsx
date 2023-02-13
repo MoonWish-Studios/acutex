@@ -79,7 +79,9 @@ export default function StickyScroll() {
               opportunities and providing positive impact we are actively
               seeking ways to attract, educate and grow our industry.
             </p>
-            <Button className="mt-4">Get In Touch</Button>
+            <Button href="/contact" className="mt-4">
+              Get In Touch
+            </Button>
           </div>
         </div>
         <Image
@@ -116,7 +118,9 @@ export default function StickyScroll() {
             <p className="text-md font-bold text-gray1 leading-10 tracking-wider">
               SERVE. IMPROVE. GROW.
             </p>
-            <Button className="mt-4">Get In Touch</Button>
+            <Button href="/contact" className="mt-4">
+              Get In Touch
+            </Button>
           </div>
         </div>
         <Image
@@ -148,7 +152,9 @@ export default function StickyScroll() {
               high-pressured sales pitch.  You will never disappointed
               with ACUTEX....We Guarantee it!
             </p>
-            <Button className="mt-4">Get In Touch</Button>
+            <Button href="/contact" className="mt-4">
+              Get In Touch
+            </Button>
           </div>
         </div>
         <Image
