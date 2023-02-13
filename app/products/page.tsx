@@ -15,7 +15,7 @@ import { Landing } from "../components/ContactForm"
 
 const exclusiveProducts = [
   {
-    title: "Cotton Mélanges",
+    title: "Cotton Mélange",
     heading: "100% Cotton Dyeable Heather PFD Fabric",
     bullet: [
       "Low Fabric Order Quantity",
