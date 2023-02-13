@@ -108,22 +108,22 @@ export function ContactForm() {
         ]}
         required
       />
-      {/* <CheckboxSection title="Request Info For*"> */}
-      {/* <Checkbox label="Made in USA Knit Fabrics" description="" />
-          <Checkbox label="Marketing & Sales Opportunities" description="" />
-          <Checkbox
-            label="Core Styles"
-            description="Jersey, Terry, Fleece, Rib, Thermal"
-          />
-          <Checkbox
-            label="Custom Development"
-            description="Novelty, Specialty, Functional, Certified, etc."
-          />
-          <Checkbox
-            label="Garment Manufacturing"
-            description="Including cut, sew, print, garment dye, etc."
-          />
-        </CheckboxSection> */}
+      {/* <CheckboxSection title="Request Info For*">
+        <Checkbox label="Made in USA Knit Fabrics" description="" />
+        <Checkbox label="Marketing & Sales Opportunities" description="" />
+        <Checkbox
+          label="Core Styles"
+          description="Jersey, Terry, Fleece, Rib, Thermal"
+        />
+        <Checkbox
+          label="Custom Development"
+          description="Novelty, Specialty, Functional, Certified, etc."
+        />
+        <Checkbox
+          label="Garment Manufacturing"
+          description="Including cut, sew, print, garment dye, etc."
+        />
+      </CheckboxSection> */}
       <H3>Free Fabric Assessment (optional)</H3>
       <fieldset className="flex flex-col md:grid md:grid-flow-row gap-y-4 gap-x-2 md:grid-cols-2 transition w-full rounded-md">
         {/* <p className="absolute text-md text-neutral-500 duration-300 transform -translate-x-4 -translate-y-8 scale-75 "> */}
@@ -220,15 +220,15 @@ export function CheckboxSection({
   children: React.ReactNode
 }) {
   return (
-    <div
+    <fieldset
       className={`flex flex-col md:grid md:grid-flow-row md:grid-cols-2 gap-2 transition pt-3 pb-6 px-4 w-full rounded-md bg-grayInput ${className}`}
     >
       {/* <p className="absolute text-md text-neutral-500 duration-300 transform -translate-x-4 -translate-y-8 scale-75 "> */}
       {/* Choose Your Type */}
       {/* </p> */}
-      <p className="col-span-2 text-base text-neutral-500">{title}</p>
+      <label className="col-span-2 text-base text-neutral-500">{title}</label>
       {children}
-    </div>
+    </fieldset>
   )
 }
 export function Checkbox({
@@ -343,7 +343,19 @@ export function RadioInput({
           </option>
         )}
         {options.map((option) => (
-          <option value={option} className="whitespace-normal" key={nanoid()}>
+          <option
+            onMouseDown={(e: React.MouseEvent<HTMLOptionElement>) => {
+              const target = e.target as HTMLOptionElement
+              if (target.parentElement) {
+                console.log(target.parentElement.focus())
+                e.preventDefault()
+                target.selected = !target.selected
+              }
+            }}
+            value={option}
+            className="whitespace-normal"
+            key={nanoid()}
+          >
             {option}
           </option>
         ))}
