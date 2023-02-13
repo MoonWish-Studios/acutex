@@ -41,8 +41,8 @@ export default function Advantage() {
         <Link
           onClick={() => setCategory("Mission")}
           href={"/"}
-          className={`text-gray1 ${
-            category == "Mission" ? "text-black font-semibold" : ""
+          className={` ${
+            category == "Mission" ? "text-black font-semibold" : "text-gray1"
           }`}
         >
           Mission
@@ -50,8 +50,8 @@ export default function Advantage() {
         <Link
           onClick={() => setCategory("Experience")}
           href={"/"}
-          className={`text-gray1 ${
-            category == "Experience" ? "text-black font-semibold" : ""
+          className={` ${
+            category == "Experience" ? "text-black font-semibold" : "text-gray1"
           }`}
         >
           Experience
@@ -59,8 +59,8 @@ export default function Advantage() {
         <Link
           onClick={() => setCategory("Efficient")}
           href={"/"}
-          className={`text-gray1 ${
-            category == "Efficient" ? "text-black font-semibold" : ""
+          className={` ${
+            category == "Efficient" ? "text-black font-semibold" : "text-gray1"
           }`}
         >
           Efficient
@@ -68,8 +68,8 @@ export default function Advantage() {
         <Link
           onClick={() => setCategory("Future")}
           href={"/"}
-          className={`text-gray1 ${
-            category == "Future" ? "text-black font-semibold" : ""
+          className={` ${
+            category == "Future" ? "text-black font-semibold" : "text-gray1"
           }`}
         >
           Future

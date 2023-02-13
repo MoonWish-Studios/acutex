@@ -19,11 +19,11 @@ export default function Navbar({ className }: { className?: string }) {
     <div className={`absolute top-0 lg:mx-auto  w-full z-[999]  ${className} `}>
       <div className="flex items-center justify-between py-5 px-8 ">
         {/* Logo */}
-        <Link className="my-2 ml-5" href="/">
+        <Link className="my-2 md:ml-5" href="/">
           <Image
             src={"/assets/logo.png"}
             alt="company logo"
-            width="200"
+            width="190"
             height="125"
           />
         </Link>
