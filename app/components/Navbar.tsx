@@ -13,7 +13,7 @@ export default function Navbar({ className }: { className?: string }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    console.log(open)
+    // console.log(open)
   })
   return (
     <div className={`absolute top-0 lg:mx-auto  w-full z-[999]  ${className} `}>
