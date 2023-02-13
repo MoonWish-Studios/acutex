@@ -4,7 +4,6 @@ export default function Head() {
       <title>Home | Acutex</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="author" content="UFG, Inc." />
-      <meta name="generator" content="Starfield Technologies;" />
 
       <meta property="og:type" content="website" />
       <meta
