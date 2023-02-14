@@ -4,6 +4,15 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: true,
+  async redirect() {
+    return [
+      {
+        source: "/me",
+        destination: "/",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
