@@ -160,6 +160,7 @@ export function ContactForm() {
         icon="/assets/icons/contact/pencil-alt.svg"
         textarea
       />
+      <input type="text" name="_gotcha" className="hidden" />
       <input
         type="submit"
         value="Submit Inquiry"
