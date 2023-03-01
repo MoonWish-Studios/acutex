@@ -38,42 +38,46 @@ export default function Advantage() {
       </div>
 
       <div className="navigation flex flex-row gap-6 text-base md:text-lg ">
-        <Link
+        <div
           onClick={() => setCategory("Mission")}
-          href={""}
           className={` ${
-            category == "Mission" ? "text-black font-semibold" : "text-gray1"
+            category == "Mission"
+              ? "text-black font-semibold hover:cursor-pointer"
+              : "text-gray1 hover:cursor-pointer"
           }`}
         >
           Mission
-        </Link>
-        <Link
+        </div>
+        <div
           onClick={() => setCategory("Experience")}
-          href={""}
           className={` ${
-            category == "Experience" ? "text-black font-semibold" : "text-gray1"
+            category == "Experience"
+              ? "text-black font-semibold hover:cursor-pointer"
+              : "text-gray1 hover:cursor-pointer"
           }`}
         >
           Experience
-        </Link>
-        <Link
+        </div>
+        <div
           onClick={() => setCategory("Efficient")}
-          href={""}
           className={` ${
-            category == "Efficient" ? "text-black font-semibold" : "text-gray1"
+            category == "Efficient"
+              ? "text-black font-semibold hover:cursor-pointer"
+              : "text-gray1 hover:cursor-pointer"
           }`}
         >
           Efficient
-        </Link>
-        <Link
+        </div>
+        <div
           onClick={() => setCategory("Future")}
-          href={""}
           className={` ${
-            category == "Future" ? "text-black font-semibold" : "text-gray1"
+            category == "Future"
+              ? "text-black font-semibold hover:cursor-pointer"
+              : "text-gray1 hover:cursor-pointer"
           }`}
         >
           Future
-        </Link>
+        </div>
         {/* {categories.map((mapCategory) => (
           <Link
             onClick={() => setCategory(mapCategory)}
