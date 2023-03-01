@@ -40,7 +40,7 @@ export default function Advantage() {
       <div className="navigation flex flex-row gap-6 text-base md:text-lg ">
         <Link
           onClick={() => setCategory("Mission")}
-          href={"/"}
+          href={""}
           className={` ${
             category == "Mission" ? "text-black font-semibold" : "text-gray1"
           }`}
@@ -49,7 +49,7 @@ export default function Advantage() {
         </Link>
         <Link
           onClick={() => setCategory("Experience")}
-          href={"/"}
+          href={""}
           className={` ${
             category == "Experience" ? "text-black font-semibold" : "text-gray1"
           }`}
@@ -58,7 +58,7 @@ export default function Advantage() {
         </Link>
         <Link
           onClick={() => setCategory("Efficient")}
-          href={"/"}
+          href={""}
           className={` ${
             category == "Efficient" ? "text-black font-semibold" : "text-gray1"
           }`}
@@ -67,7 +67,7 @@ export default function Advantage() {
         </Link>
         <Link
           onClick={() => setCategory("Future")}
-          href={"/"}
+          href={""}
           className={` ${
             category == "Future" ? "text-black font-semibold" : "text-gray1"
           }`}
